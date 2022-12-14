@@ -1,0 +1,113 @@
+- layers:
+  - 'Conv2d;out_channels: 64;kernel_size: 11;stride: 4;padding: 2'
+  - ReLU
+  - 'MaxPool2d;kernel_size: 3;stride: 2;padding: 0'
+  - 'Conv2d;out_channels: 192;kernel_size: 5;stride: 1;padding: 2'
+  - ReLU
+  - 'MaxPool2d;kernel_size: 3;stride: 2;padding: 0'
+  - 'Conv2d;out_channels: 384;kernel_size: 3;stride: 1;padding: 1'
+  - ReLU
+  - 'Conv2d;out_channels: 256;kernel_size: 3;stride: 1;padding: 1'
+  - ReLU
+  - 'Conv2d;out_channels: 256;kernel_size: 3;stride: 1;padding: 1'
+  - ReLU
+  - 'MaxPool2d;kernel_size: 3;stride: 2;padding: 0'
+  - 'AdaptiveAvgPool2d;output_size: 6'
+  - Flatten
+  - 'Dropout;p: 0.5'
+  - 'Linear;out_features: 4096'
+  - ReLU
+  - 'Dropout;p: 0.5'
+  - 'Linear;out_features: 1024'
+  - ReLU
+  - 'Linear;out_features: 10'
+  name: alexnet
+- layers:
+  - 'Conv2d;out_channels: 64;kernel_size: 11;stride: 4;padding: 2'
+  - ReLU
+  - 'MaxPool2d;kernel_size: 3;stride: 2;padding: 0'
+  - 'Conv2d;out_channels: 192;kernel_size: 5;stride: 1;padding: 2'
+  - ReLU
+  - 'MaxPool2d;kernel_size: 3;stride: 2;padding: 0'
+  - 'Conv2d;out_channels: 384;kernel_size: 3;stride: 1;padding: 1'
+  - ReLU
+  - 'Conv2d;out_channels: 256;kernel_size: 3;stride: 1;padding: 1'
+  - ReLU
+  - 'Conv2d;out_channels: 256;kernel_size: 3;stride: 1;padding: 1'
+  - ReLU
+  - 'MaxPool2d;kernel_size: 3;stride: 2;padding: 0'
+  - 'AdaptiveAvgPool2d;output_size: 6'
+  - Flatten
+  - 'Dropout;p: 0.5'
+  - 'Linear;out_features: 4096'
+  - ReLU
+  - 'Dropout;p: 0.5'
+  - 'Linear;out_features: 1024'
+  - ReLU
+  - 'Linear;out_features: 10'
+  name: net2
+- layers:
+  - 'Conv2d;out_channels: 64;kernel_size: 11;stride: 4;padding: 2'
+  - ReLU
+  - 'MaxPool2d;kernel_size: 3;stride: 2;padding: 0'
+  - 'Conv2d;out_channels: 192;kernel_size: 5;stride: 1;padding: 2'
+  - ReLU
+  - 'MaxPool2d;kernel_size: 3;stride: 2;padding: 0'
+  - 'Conv2d;out_channels: 384;kernel_size: 3;stride: 1;padding: 1'
+  - ReLU
+  - 'Conv2d;out_channels: 256;kernel_size: 3;stride: 1;padding: 1'
+  - ReLU
+  - 'Conv2d;out_channels: 256;kernel_size: 3;stride: 1;padding: 1'
+  - ReLU
+  - 'MaxPool2d;kernel_size: 3;stride: 2;padding: 0'
+  - 'AdaptiveAvgPool2d;output_size: 6'
+  - Flatten
+  - 'Dropout;p: 0.5'
+  - 'Linear;out_features: 1024'
+  - ReLU
+  - 'Linear;out_features: 10'
+  name: net3
+- layers:
+  - 'Conv2d;out_channels: 64;kernel_size: 11;stride: 4;padding: 2'
+  - ReLU
+  - 'MaxPool2d;kernel_size: 3;stride: 2;padding: 0'
+  - Flatten
+  - 'Dropout;p: 0.5'
+  - 'Linear;out_features: 4096'
+  - ReLU
+  - 'Dropout;p: 0.5'
+  - 'Linear;out_features: 1024'
+  - ReLU
+  - 'Linear;out_features: 10'
+  name: net4
+- layers:
+  - 'Conv2d;out_channels: 64;kernel_size: 11;stride: 4;padding: 2'
+  - ReLU
+  - 'MaxPool2d;kernel_size: 3;stride: 2;padding: 0'
+  - 'Conv2d;out_channels: 192;kernel_size: 5;stride: 1;padding: 2'
+  - ReLU
+  - 'MaxPool2d;kernel_size: 3;stride: 2;padding: 0'
+  - Flatten
+  - 'Dropout;p: 0.5'
+  - 'Linear;out_features: 4096'
+  - ReLU
+  - 'Dropout;p: 0.5'
+  - 'Linear;out_features: 1024'
+  - ReLU
+  - 'Linear;out_features: 10'
+  name: net5
+- layers:
+  - 'Conv2d;out_channels: 64;kernel_size: 11;stride: 4;padding: 2'
+  - ReLU
+  - 'MaxPool2d;kernel_size: 3;stride: 2;padding: 0'
+  - 'Conv2d;out_channels: 192;kernel_size: 5;stride: 1;padding: 2'
+  - ReLU
+  - Flatten
+  - 'Dropout;p: 0.5'
+  - 'Linear;out_features: 4096'
+  - ReLU
+  - 'Dropout;p: 0.5'
+  - 'Linear;out_features: 1024'
+  - ReLU
+  - 'Linear;out_features: 10'
+  name: net6

@@ -1,0 +1,6 @@
+criterion: MSELoss
+epochs: 300
+optimizer: SGD
+optimizer_kwargs:
+  lr: 0.01
+  momentum: 0.9
