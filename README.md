@@ -7,7 +7,7 @@ D. Coufal, F. Hakl, P. Vidnerová.
 The Czech Academy of Sciences, Institute of Computer Science
 
 ### Keywords 
-eep neural networks, generative adverisal networks, conditional generation, generative algorithms, neural architecture search, model selection, evolutionary algorithms, multiobjective optimisation
+deep neural networks, generative adverisal networks, conditional generation, generative algorithms, neural architecture search, model selection, evolutionary algorithms, multiobjective optimisation
 
 ### Contents
 ```
