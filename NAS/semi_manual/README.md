@@ -1,1 +1,1 @@
-# Tools for evaluation of manualy designed networks
+# Tools for evaluation of user defined networks
