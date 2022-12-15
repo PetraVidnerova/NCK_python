@@ -35,5 +35,8 @@ deep neural networks, generative adverisal networks, conditional generation, gen
 
 ```
 
+See the individual subdirectories for details on the individual parts and corresponding user instructions.
+
+
 ### Acknowledgement
 This work was partially supported by the TAČR grant TN01000024 and institutional support of the Institute of Computer Science RVO 67985807.
