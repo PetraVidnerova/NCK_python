@@ -1,8 +1,4 @@
 # <img src="fig/ananas.png" width="50px"/> AnANAS
-Answer to Automatic Neural Architecture Search 
-
-
-*Author: Petra Vidnerová, The Czech Academy of Sciences, Institute of Computer Science*
 
 A tool for automatic architecture search based on multiobjective evolution optimising 
 both network perfomance and an architecture size.  
