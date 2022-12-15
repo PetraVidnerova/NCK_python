@@ -2,6 +2,9 @@
 
 Repository of General-purpose Library of ML/AI Methods.
 
+TODO - write abstract here, two paragraphs, one for NAS, one for GANs
+
+
 ### Authors 
 D. Coufal, F. Hakl, P. Vidnerová. 
 The Czech Academy of Sciences, Institute of Computer Science
