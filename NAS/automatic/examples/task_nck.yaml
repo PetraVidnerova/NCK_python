@@ -1,0 +1,42 @@
+dataset:
+  name: gan_256192
+  source_type: tfrecords
+  ximg: 256
+  yimg: 192
+  len_train: 1963 
+  
+network_type: conv
+
+nsga: 2
+
+main_alg:
+  batch_size: 8
+  eval_batch_size: 1
+  epochs: 60
+  loss: mean_squared_error
+  task_type: regression
+  final_epochs: 100
+
+ga:
+  pop_size: 10
+  n_gen: 50
+  
+network:
+  max_layers: 5
+  max_layer_size: 300
+  min_layer_size: 5
+  dropout: [0.0, 0.2, 0.3, 0.4]
+  activations: ['relu', 'tanh', 'sigmoid', 'hard_sigmoid', 'linear']
+  max_conv_layers: 4
+  conv_layer: 0.7
+  max_pool_layer: 0.3
+  min_pool_size: 2
+  max_pool_size: 4
+  min_filters: 10
+  max_filters: 50
+  max_dense_layers: 4
+  min_kernel_size: 2
+  max_kernel_size: 5
+
+device:
+  device_type: GPU
