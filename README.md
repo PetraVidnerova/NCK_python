@@ -2,7 +2,10 @@
 
 Repository of General-purpose Library of ML/AI Methods.
 
-TODO - write abstract here, two paragraphs, one for NAS, one for GANs
+The important part of successful neural network solution is a choice of an appropriate architecture. We provide tools automating this process, including semi-manual tools and fully automatic search. The semi-manual solution provides tools for automatic evaluation of a set of user defined architectures. 
+The fully automatic search is based on evolutionary optimisation that finds a suitable network for a given problem. 
+
+GANs ...
 
 
 ### Authors 
