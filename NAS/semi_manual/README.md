@@ -24,10 +24,10 @@
    ```
    This creates `data_list.csv`, this CSV file can be used for RobotDataSet (see `dataset.py`) or `resize.py` script.  
    
-2. preprocess images by `resize.py` (create mirror direcory containg `.pt` file
-   for each original image)
+3. [OPTIONAL] You can preprocess images by `resize.py`. It creates mirror direcory containg `.pt` file
+   for each original image. 
    
-3. use RobotPreprocessedDataset for training (see `test.py` for example)
+4. use RobotPreprocessedDataset for training (see `test.py` for example)
 
 ## Semi-automatic net search
 
