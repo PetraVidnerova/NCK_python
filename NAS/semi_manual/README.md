@@ -26,6 +26,16 @@
    
 3. [OPTIONAL] You can preprocess images by `resize.py`. It creates mirror direcory containg `.pt` file
    for each original image. 
+   ```
+   Usage: resize.py [OPTIONS] SRC DEST
+
+Options:
+  -x, --sizex INTEGER
+  -y, --sizey INTEGER
+  --help               Show this message and exit.
+
+   ```
+   
    
 4. use RobotPreprocessedDataset for training (see `test.py` for example)
 
