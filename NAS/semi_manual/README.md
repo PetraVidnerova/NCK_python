@@ -40,7 +40,9 @@
    python resize.py -x 256 -y 192 ../exp7500/ ../data256x192
    ```
    
-4. use RobotPreprocessedDataset for training (see `test.py` for example)
+4. You can use `RobotDataSet` or `RobotPreprocessedDataset` (in case you have preprocessed images) for training (see `test.py` for example).
+
+
 
 ## Semi-automatic net search
 
