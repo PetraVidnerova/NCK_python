@@ -35,7 +35,10 @@
      --help               Show this message and exit.
 
    ```
-   
+   For example:
+   ```
+   python resize.py -x 256 -y 192 ../exp7500/ ../data256x192
+   ```
    
 4. use RobotPreprocessedDataset for training (see `test.py` for example)
 
