@@ -29,10 +29,10 @@
    ```
    Usage: resize.py [OPTIONS] SRC DEST
 
-Options:
-  -x, --sizex INTEGER
-  -y, --sizey INTEGER
-  --help               Show this message and exit.
+   Options:
+     -x, --sizex INTEGER
+     -y, --sizey INTEGER
+     --help               Show this message and exit.
 
    ```
    
