@@ -18,8 +18,11 @@
 ```
 
 
-create data list using `data.py` (outputs CSV file), 
-   this CSV file can be used for RobotDataSet (see `dataset.py`).
+2. As a preliminary step, we create data list using `data.py`:   
+   ```
+   python data.py ../exp7500/
+   ```
+   This creates `data_list.csv`, this CSV file can be used for RobotDataSet (see `dataset.py`) or `resize.py` script.  
    
 2. preprocess images by `resize.py` (create mirror direcory containg `.pt` file
    for each original image)
