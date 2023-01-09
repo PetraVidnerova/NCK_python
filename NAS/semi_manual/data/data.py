@@ -1,8 +1,13 @@
+import sys 
 import os
 import yaml
 import pandas as pd
 
-DIR="exp7500"
+
+if len(sys.argv) == 1:
+    DIR="exp7500"
+else:
+    DIR=sys.argv[1]
 
 subdirectories = [
     subdir
