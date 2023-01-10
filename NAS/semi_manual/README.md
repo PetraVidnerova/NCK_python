@@ -47,3 +47,12 @@
 ## Semi-automatic net search
 
 A tool for simple evaluating of network architectures.
+
+1. Create a YAML file with list of network architectures. See `networks.yaml` for the example of syntax. 
+
+2. [OPTIONAL] Create a YAML file with configuration of training. See `train_cfg_example.yaml`. 
+
+3. Run `train_para.py`.
+```
+```
+
