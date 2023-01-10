@@ -3,10 +3,10 @@ import torch
 import torchvision.transforms as transforms
 from torch.utils.data.dataloader import DataLoader
 
-from data import test as T
+from data.test import create_data_loader as test_data_loader
 
 def create_data_loader(batch_size, train_val=True, test=True,
-                       data_root="../data/exp7500_256x192"):
+                       data_root="../data256x192"):
 
     if train_val:
         train_list = [
@@ -17,8 +17,8 @@ def create_data_loader(batch_size, train_val=True, test=True,
         random.shuffle(train_list)
         train_list, val_list = train_list[:-11], train_list[-11:]
 
-        train_dl = T.create_data_loader("../data/data_list.csv", image_list=train_list, data_root=data_root, rotate=False)
-        val_dl = T.create_data_loader("../data/data_list.csv", image_list=val_list, data_root=data_root)
+        train_dl = test_data_loader("../data/data_list.csv", image_list=train_list, data_root=data_root, rotate=False)
+        val_dl = test_data_loader("../data/data_list.csv", image_list=val_list, data_root=data_root)
     else:
         train_dl, val_dl = None, None
 
@@ -27,7 +27,7 @@ def create_data_loader(batch_size, train_val=True, test=True,
             6,9,12,15,18,21,24,27,30,33,36,39,42,45,49,52,55,58,61,64,67,73
         ]
 
-        test_dl = T.create_data_loader("../data/data_list.csv", image_list=test_list, data_root=data_root)
+        test_dl = test_data_loader("../data/data_list.csv", image_list=test_list, data_root=data_root)
     else:
         test_dl = None
 

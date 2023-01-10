@@ -97,12 +97,12 @@ def main():
     random.shuffle(train_list)
     train_list, val_list = train_list[:-11], train_list[-11:]
 
-    train_dl = create_data_loader(image_list=train_list)
-    val_dl = create_data_loader(image_list=val_list)
+    train_dl = create_data_loader(image_list=train_list, data_root="../data256x192")
+    val_dl = create_data_loader(image_list=val_list, data_root="../data256x192")
     
     train(net, train_dl, val_dl, 100, device=device)
 
-    test_dl = create_data_loader(image_list=test_list)
+    test_dl = create_data_loader(image_list=test_list, data_root="../data256x192")
     evaluate(net, test_dl, device=device)
     
 if __name__ == "__main__":
