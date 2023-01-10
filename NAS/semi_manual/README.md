@@ -18,9 +18,9 @@
 ```
 
 
-2. As a preliminary step, we create data list using `data.py`:   
+2. As a preliminary step, we create data list using `create_list.py`:   
    ```
-   python data.py ../exp7500/
+   python create_list.py ../exp7500/
    ```
    This creates `data_list.csv`, this CSV file can be used for RobotDataSet (see `dataset.py`) or `resize.py` script.  
    
