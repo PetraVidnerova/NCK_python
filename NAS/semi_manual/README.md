@@ -18,17 +18,41 @@
 ```
 
 
-2. As a preliminary step, we create data list using `data.py`:   
+2. As a preliminary step, we create data list using `create_list.py`:   
    ```
-   python data.py ../exp7500/
+   python create_list.py ../exp7500/
    ```
    This creates `data_list.csv`, this CSV file can be used for RobotDataSet (see `dataset.py`) or `resize.py` script.  
    
 3. [OPTIONAL] You can preprocess images by `resize.py`. It creates mirror direcory containg `.pt` file
    for each original image. 
+   ```
+   Usage: resize.py [OPTIONS] SRC DEST
+
+   Options:
+     -x, --sizex INTEGER
+     -y, --sizey INTEGER
+     --help               Show this message and exit.
+
+   ```
+   For example:
+   ```
+   python resize.py -x 256 -y 192 ../exp7500/ ../data256x192
+   ```
    
-4. use RobotPreprocessedDataset for training (see `test.py` for example)
+4. You can use `RobotDataSet` or `RobotPreprocessedDataset` (in case you have preprocessed images) for training (see `test.py` for example).
+
+
 
 ## Semi-automatic net search
 
 A tool for simple evaluating of network architectures.
+
+1. Create a YAML file with list of network architectures. See `networks.yaml` for the example of syntax. 
+
+2. [OPTIONAL] Create a YAML file with configuration of training. See `train_cfg_example.yaml`. 
+
+3. Run `train_para.py`.
+```
+```
+
