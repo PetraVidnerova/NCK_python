@@ -11,10 +11,10 @@ deep neural networks, convolutional neural networks, automatic model selection, 
 numpy, keras, pandas, scikit-learn, deap, click, matplotlib
 
 ## Main features:
-- using keras datasets or data form csv files 
-- "vanilla" GA, multiobjective evolution via NSGA, NSGAII, NSGAIII 
-- runing in parallel on one GPU or parallel on several CPUs 
-- optimising feedworfard deep neural networks with dense layers, convolutinal networks   
+- supports keras datasets, data form csv files, data from tensorflow records
+- implements "vanilla" GA, multiobjective evolution via NSGA, NSGAII, NSGAIII 
+- runs in parallel on one GPU or parallel on several CPUs 
+- optimises feedworfard deep neural networks with dense layers, convolutinal networks   
  
 ## Usage:
 1. Run evolution using `main.py`, produces a `.json` file with the list of all architectures from the pareto-front, a `.pkl` file with the checkpoint (after each iteration). Checkpoint stores all information
