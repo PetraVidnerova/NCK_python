@@ -12,7 +12,6 @@
   - 'Conv2d;out_channels: 256;kernel_size: 3;stride: 1;padding: 1'
   - ReLU
   - 'MaxPool2d;kernel_size: 3;stride: 2;padding: 0'
-  - 'AdaptiveAvgPool2d;output_size: 6'
   - Flatten
   - 'Dropout;p: 0.5'
   - 'Linear;out_features: 4096'
@@ -20,7 +19,7 @@
   - 'Dropout;p: 0.5'
   - 'Linear;out_features: 1024'
   - ReLU
-  - 'Linear;out_features: 10'
+  - 'Linear;out_features: 6'
   name: alexnet
 - layers:
   - 'Conv2d;out_channels: 64;kernel_size: 11;stride: 4;padding: 2'
@@ -36,7 +35,6 @@
   - 'Conv2d;out_channels: 256;kernel_size: 3;stride: 1;padding: 1'
   - ReLU
   - 'MaxPool2d;kernel_size: 3;stride: 2;padding: 0'
-  - 'AdaptiveAvgPool2d;output_size: 6'
   - Flatten
   - 'Dropout;p: 0.5'
   - 'Linear;out_features: 4096'
@@ -44,7 +42,7 @@
   - 'Dropout;p: 0.5'
   - 'Linear;out_features: 1024'
   - ReLU
-  - 'Linear;out_features: 10'
+  - 'Linear;out_features: 6'
   name: net2
 - layers:
   - 'Conv2d;out_channels: 64;kernel_size: 11;stride: 4;padding: 2'
@@ -60,12 +58,11 @@
   - 'Conv2d;out_channels: 256;kernel_size: 3;stride: 1;padding: 1'
   - ReLU
   - 'MaxPool2d;kernel_size: 3;stride: 2;padding: 0'
-  - 'AdaptiveAvgPool2d;output_size: 6'
   - Flatten
   - 'Dropout;p: 0.5'
   - 'Linear;out_features: 1024'
   - ReLU
-  - 'Linear;out_features: 10'
+  - 'Linear;out_features: 6'
   name: net3
 - layers:
   - 'Conv2d;out_channels: 64;kernel_size: 11;stride: 4;padding: 2'
@@ -78,7 +75,7 @@
   - 'Dropout;p: 0.5'
   - 'Linear;out_features: 1024'
   - ReLU
-  - 'Linear;out_features: 10'
+  - 'Linear;out_features: 6'
   name: net4
 - layers:
   - 'Conv2d;out_channels: 64;kernel_size: 11;stride: 4;padding: 2'
@@ -94,7 +91,7 @@
   - 'Dropout;p: 0.5'
   - 'Linear;out_features: 1024'
   - ReLU
-  - 'Linear;out_features: 10'
+  - 'Linear;out_features: 6'
   name: net5
 - layers:
   - 'Conv2d;out_channels: 64;kernel_size: 11;stride: 4;padding: 2'
@@ -109,5 +106,5 @@
   - 'Dropout;p: 0.5'
   - 'Linear;out_features: 1024'
   - ReLU
-  - 'Linear;out_features: 10'
+  - 'Linear;out_features: 6'
   name: net6
