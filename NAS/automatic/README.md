@@ -1,4 +1,4 @@
-# <img src="fig/ananas.png" width="50px"/> AnANAS
+# Auto-NAS
 
 A tool for automatic architecture search based on multiobjective evolution optimising 
 both network perfomance and an architecture size.  
