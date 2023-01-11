@@ -57,29 +57,29 @@ if __name__ == "__main__":
     net = net.to(device)
     net.eval()
     
-    start = time()
-    num = 0
-    ur_correct = 0
-    ku_correct = 0 
-    for images, labels in test_dl:
+    # start = time()
+    # num = 0
+    # ur_correct = 0
+    # ku_correct = 0 
+    # for images, labels in test_dl:
 
-        images = images.to(device)
-        predictions = net(images).detach().cpu()
+    #     images = images.to(device)
+    #     predictions = net(images).detach().cpu()
 
-        for label, prediction in zip(labels, predictions):
+    #     for label, prediction in zip(labels, predictions):
 
-            print(prediction)
-            err = label - prediction
-            valid_ur, valid_ku = check_validity_orig(err)
-            num += 1
-            ur_correct += valid_ur
-            ku_correct += valid_ku
+    #         print(prediction)
+    #         err = label - prediction
+    #         valid_ur, valid_ku = check_validity_orig(err)
+    #         num += 1
+    #         ur_correct += valid_ur
+    #         ku_correct += valid_ku
 
-    print(f"UR: {ur_correct/num:.2f}")
-    print(f"KU: {ku_correct/num:.2f}")
-    print(f"{time()-start} secs")
+    # print(f"UR: {ur_correct/num:.2f}")
+    # print(f"KU: {ku_correct/num:.2f}")
+    # print(f"{time()-start} secs")
 
-    start = time()
+    #    start = time()
     num = 0
     ur_correct = 0
     ku_correct = 0
@@ -95,4 +95,4 @@ if __name__ == "__main__":
 
     print(f"UR: {ur_correct/num:.2f}")
     print(f"KU: {ku_correct/num:.2f}")
-    print(f"{time()-start} secs")
+    #    print(f"{time()-start} secs")
