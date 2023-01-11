@@ -30,7 +30,7 @@ deep neural networks, generative adverisal networks, conditional generation, gen
 |     |
 |     |__ automatic 
 |               |
-|               |__ ananas    (scripts for automatic architecture search)
+|               |__ auto_nas    (scripts for automatic architecture search)
 |               |
 |               |__ examples  (examples of config files)
 |                
