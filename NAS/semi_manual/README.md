@@ -66,3 +66,9 @@ for example:
 python train_para.py networks.yaml --data-root ../data256x192/ --input_shape "256,192"
 ```
 
+## Postprocessing
+
+Use the script `validity.py` to check the success rate (in the robot task) of your network.
+```
+python validity.py my_net.pt
+```
