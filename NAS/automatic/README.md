@@ -65,38 +65,50 @@ python evaluate_result.py eval-front  --data_source keras --trainset mnist check
 
 ## Config file example
 
-task.yaml 
+task_nck.yaml 
 ```
 dataset:
-  name: mnist
-  source_type: keras
-
-network_type: dense
+  name: gan_256192
+  source_type: tfrecords
+  ximg: 256
+  yimg: 192
+  len_train: 1963 
+  
+network_type: conv
 
 nsga: 2
 
 main_alg:
-  batch_size: 128
-  eval_batch_size: 30
-  epochs: 10
+  batch_size: 8
+  eval_batch_size: 1
+  epochs: 60
   loss: mean_squared_error
-  task_type: classification
-  final_epochs: 20
+  task_type: regression
+  final_epochs: 100
 
 ga:
-  pop_size: 20
-  n_gen: 20
+  pop_size: 10
+  n_gen: 50
   
 network:
   max_layers: 5
-  max_layer_size: 1000
-  min_layer_size: 10
+  max_layer_size: 300
+  min_layer_size: 5
   dropout: [0.0, 0.2, 0.3, 0.4]
   activations: ['relu', 'tanh', 'sigmoid', 'hard_sigmoid', 'linear']
+  max_conv_layers: 4
+  conv_layer: 0.7
+  max_pool_layer: 0.3
+  min_pool_size: 2
+  max_pool_size: 4
+  min_filters: 10
+  max_filters: 50
+  max_dense_layers: 4
+  min_kernel_size: 2
+  max_kernel_size: 5
 
 device:
-  device_type: CPU
-  n_cpus: 10 
+  device_type: GPU
 ```
 
 To run on GPU specify:
@@ -104,14 +116,14 @@ To run on GPU specify:
 device:
   device_type: GPU
 ``` 
-In fact, the usage of GPU or CPU depands on your tensorflow version. With tensorflow-gpu it will run on GPU. Option `device_type: GPU` 
-only forces the  fitness function to use a multi-model and evaluate individuals simutaneously on one GPU.
+
 If no GPU, use `device_type: CPU` and `n_cpus` that forces a use of multiprocessing with the given number of workers. 
 
 To evolve convolutional networks:
 ```
 network_type: conv
 ``` 
+
 To use data from `csv` file (file should be comma separated, 
 without a header, output variable in the last column):
 ```
