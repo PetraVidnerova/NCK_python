@@ -1,15 +1,10 @@
 # Auto-NAS
 
-A tool for automatic architecture search based on multiobjective evolution optimising 
+An  automatic architecture search tool based on multi-objective evolution. It optimises
 both network perfomance and an architecture size.  
 
 ## Keywords:
-- automatic model selection
-- neural architecture search 
-- multiobjective optimisation
-- NSGA, NSGAII, NSGA3
-- deep neural networks 
-- convolutional neural networks
+deep neural networks, convolutional neural networks, automatic model selection, neural architecture search, multiobjective optimisatio, NSGA, NSGAII, NSGA3
 
 ## Requirements:
 
