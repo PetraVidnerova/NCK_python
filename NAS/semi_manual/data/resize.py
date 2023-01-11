@@ -25,7 +25,7 @@ def resize(src, dest, size=(256, 192), fname="data_list.csv"):
     def transform_img(img):
         transform =  transforms.Compose([
             transforms.ConvertImageDtype(torch.float32),
-            transforms.Resize((512,512))
+            transforms.Resize(size)
         ])
         return transform(img)    
 
