@@ -38,7 +38,7 @@ Example:
 ```
 python main.py task.yaml --id test1
 ```
-to run on one GPU (recommended), I use: 
+to run on one GPU (recommended),  use: 
 ```
 CUDA_VISIBLE_DEVICES=0 python main.py tasks.yaml --id gpu_test 
 ```
