@@ -54,5 +54,15 @@ A tool for simple evaluating of network architectures.
 
 3. Run `train_para.py`.
 ```
+sage: train_para.py [OPTIONS] NETWORKS [TRAINCFG]
+
+Options:
+  --data-root TEXT
+  --input_shape TEXT
+  --help              Show this message and exit.
+```
+for example:
+```
+python train_para.py networks.yaml --data-root ../data256x192/ --input_shape "256,192"
 ```
 
