@@ -54,7 +54,7 @@ A tool for simple evaluating of network architectures.
 
 3. Run `train_para.py`.
 ```
-sage: train_para.py [OPTIONS] NETWORKS [TRAINCFG]
+Usage: train_para.py [OPTIONS] NETWORKS [TRAINCFG]
 
 Options:
   --data-root TEXT
