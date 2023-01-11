@@ -25,14 +25,15 @@ PRETRAINED=False
 BATCH_SIZE=64
 
 
-def evaluate_network(net, train_cfg, random_seed=None, device="cpu"):
+def evaluate_network(net, train_cfg, data_root, random_seed=None, device="cpu"):
     if random_seed is not None:
         torch.manual_seed(random_seed)
         np.random.seed(random_seed)
 
     train_dl, val_dl, _ = create_data_loader(BATCH_SIZE,
                                              train_val=True,
-                                             test=False)
+                                             test=False,
+                                             data_root=data_root)
         
     net = train(
         net,
@@ -40,16 +41,16 @@ def evaluate_network(net, train_cfg, random_seed=None, device="cpu"):
         **train_cfg,
         device=device
     )
-    _, _, test_dl = create_data_loader(BATCH_SIZE, train_val=False, test=True)
+    _, _, test_dl = create_data_loader(BATCH_SIZE, train_val=False, test=True, data_root=data_root)
     return evaluate(net, test_dl, train_cfg["criterion"], device)
     
 
 def evaluate_task(task_config, device):
-    netstr, train_cfg, input_shape, random_seed = task_config
+    netstr, train_cfg, input_shape, random_seed, data_root = task_config
     try:
         name, net =  create_network(netstr, input_shape, random_seed=random_seed)
         print(f"Going to evaluate network {name}")
-        res = evaluate_network(net, train_cfg, random_seed=random_seed, device=device)
+        res = evaluate_network(net, train_cfg, data_root, random_seed=random_seed, device=device)
     except RuntimeError as e:
         if "CUDA out of memory" in str(e):
             print(f"Network {name} out of memory.")
@@ -66,11 +67,14 @@ def evaluate_task(task_config, device):
 @click.command()
 @click.argument('networks')
 @click.argument('traincfg', default="train_cfg_example.yaml")
-def test(networks, traincfg):
+@click.option('--data-root', default="../data512x512")
+@click.option('--input_shape', default="512,512")
+def test(networks, traincfg, data_root, input_shape):
 
+    input_x, input_y = map(int, input_shape.split(","))
     
     train_cfg = read_config(traincfg)
-    input_shape = (1, 512, 512)
+    input_shape = (1, input_x, input_y)
     
     if torch.cuda.is_available():
         processors = torch.cuda.device_count()
@@ -86,7 +90,7 @@ def test(networks, traincfg):
     num = 0
     for cfg in load_network_configs(networks):
         
-        task_config = (cfg, train_cfg, input_shape, 42)
+        task_config = (cfg, train_cfg, input_shape, 42, data_root)
         pool.putQuerry(task_config)
         num += 1
 
