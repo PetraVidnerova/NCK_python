@@ -1,4 +1,4 @@
-from math import floor
+from math import floor, ceil
 import yaml
 import torch
 import torch.nn  as nn
@@ -25,8 +25,8 @@ def create_network(cfg, input_shape, random_seed=None):
     net = nn.Sequential()
 
     input_shape = input_shape
-    if input_shape[1] != input_shape[2]:
-        raise NotImplementedError
+    # if input_shape[1] != input_shape[2]:
+    #     raise NotImplementedError
     
     for i, layer in enumerate(cfg["layers"]):
         print(f"Processing layer {i}")
@@ -40,21 +40,21 @@ def create_network(cfg, input_shape, random_seed=None):
             input_shape = (
                 kwargs["out_channels"],
                 floor((input_shape[1] - layer.kernel_size[0] + 2*layer.padding[0])/layer.stride[0])+1,
-                floor((input_shape[1] - layer.kernel_size[0] + 2*layer.padding[0])/layer.stride[0])+1
+                floor((input_shape[2] - layer.kernel_size[1] + 2*layer.padding[1])/layer.stride[1])+1
             )
         elif name == "MaxPool2d":
             layer = class_name(**kwargs)
             input_shape = (
                 input_shape[0],
                 floor((input_shape[1] - layer.kernel_size + 2*layer.padding)/layer.stride)+1,
-                floor((input_shape[1] - layer.kernel_size + 2*layer.padding)/layer.stride)+1
+                floor((input_shape[2] - layer.kernel_size + 2*layer.padding)/layer.stride)+1
             )
         elif name == "Flatten":
             layer = Flatten()
             input_shape = input_shape[0] * input_shape[1] * input_shape[2]
         elif name == "Linear":
             layer = class_name(input_shape, **kwargs)
-            input_shape  = kwargs["out_features"] 
+            input_shape  = kwargs["out_features"]
         else:
             layer = class_name(**kwargs)
         net.append(layer)
