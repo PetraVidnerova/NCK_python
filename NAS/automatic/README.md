@@ -4,7 +4,7 @@ An  automatic architecture search tool based on multi-objective evolution. It op
 both network perfomance and an architecture size.  
 
 ## Keywords:
-deep neural networks, convolutional neural networks, automatic model selection, neural architecture search, multiobjective optimisatio, NSGA, NSGAII, NSGA3
+deep neural networks, convolutional neural networks, automatic model selection, neural architecture search, multiobjective optimisation, NSGA, NSGAII, NSGA3
 
 ## Requirements:
 
