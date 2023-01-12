@@ -17,11 +17,9 @@ deep neural networks, generative adverisal networks, conditional generation, gen
 
 ### Contents
 ```
-|
 |__ NAS  (Neural Architecture Search tools) 
 |     |
 |     |__ semi_manual   
-|     |            |
 |     |            |__ data         (data preprocessing for pytorch) 
 |     |            |
 |     |            |__ net_search   (scripts for automatic network evaluation)
@@ -29,18 +27,14 @@ deep neural networks, generative adverisal networks, conditional generation, gen
 |     |            |__ examples     (examples of config files)
 |     |
 |     |__ automatic 
-|               |
 |               |__ auto_nas    (scripts for automatic architecture search)
 |               |
 |               |__ examples  (examples of config files)
 |                
 |__ GANs
-      |
       |__ dcgan    (Deep Convolutional GAN) 
       |
       |__ lsgan    (Least Squares GAN)
-      
-
 ```
 
 See the individual subdirectories for details on the individual parts and corresponding user instructions.
