@@ -34,7 +34,12 @@ deep neural networks, generative adverisal networks, conditional generation, gen
 |               |
 |               |__ examples  (examples of config files)
 |                
-|__ GANs 
+|__ GANs
+      |
+      |__ dcgan
+      |
+      |__ lsgan
+      
 
 ```
 
