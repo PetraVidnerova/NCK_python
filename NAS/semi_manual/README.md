@@ -2,7 +2,7 @@
 
 ## Requirements 
 
-pytorch, torchvision, pyyaml, pandas, click
+pytorch, torchvision, pyyaml, pandas, click, tqdm
 
 ## Data Preprocessing
 
