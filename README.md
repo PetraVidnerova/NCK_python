@@ -36,9 +36,9 @@ deep neural networks, generative adverisal networks, conditional generation, gen
 |                
 |__ GANs
       |
-      |__ dcgan
+      |__ dcgan    (Deep Convolutional GAN) 
       |
-      |__ lsgan
+      |__ lsgan    (Least Squares GAN)
       
 
 ```
