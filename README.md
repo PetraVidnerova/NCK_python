@@ -5,7 +5,7 @@ Repository of General-purpose Library of ML/AI Methods.
 The important part of successful neural network solution is a choice of an appropriate architecture. We provide tools automating this process, including semi-manual tools and fully automatic search. The semi-manual solution provides tools for automatic evaluation of a set of user defined architectures. 
 The fully automatic search is based on evolutionary optimisation that finds a suitable network for a given problem. 
 
-GANs ...
+Generative adversial networks (GANs) are used to expand available database of disc photographs. Different loss function-based architectures such as DCGAN and LSGAN are employed. Both unconditional and conditional configurations are available. The scripts also have distributed versions that can run on a GPU cluster.
 
 
 ### Authors 
