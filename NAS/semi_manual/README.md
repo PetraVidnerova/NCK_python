@@ -1,5 +1,8 @@
 # Tools for evaluation of user defined networks
 
+## Requirements 
+
+pytorch, torchvision, pandas, click
 
 ## Data Preprocessing
 
