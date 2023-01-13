@@ -42,6 +42,11 @@ to run on one GPU (recommended),  use:
 ```
 CUDA_VISIBLE_DEVICES=0 python main.py tasks.yaml --id gpu_test 
 ```
+For the NCK robot task use 
+```
+CUDA_VISIBLE_DEVICES=0 python main.py --conv True task_nck.yaml
+```
+
 ### evaluate_result.py 
 ```
 Usage: evaluate_result.py [OPTIONS] COMMAND [ARGS]...
