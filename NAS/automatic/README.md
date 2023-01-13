@@ -68,7 +68,7 @@ Example:
 python evaluate_result.py eval-front  --data_source keras --trainset mnist checkpoint.pkl
 ```
 
-For nck robot task use 
+For NCK robot task use 
 ```
 python evaluate_result --conv True save-network 0 checkpoint.pkl 
 ```
