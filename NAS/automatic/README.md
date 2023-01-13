@@ -44,7 +44,7 @@ CUDA_VISIBLE_DEVICES=0 python main.py tasks.yaml --id gpu_test
 ```
 For the NCK robot task use 
 ```
-CUDA_VISIBLE_DEVICES=0 python main.py --conv True task_nck.yaml
+CUDA_VISIBLE_DEVICES=0 python main.py  task_nck.yaml
 ```
 
 ### evaluate_result.py 
@@ -67,6 +67,13 @@ Example:
 ```
 python evaluate_result.py eval-front  --data_source keras --trainset mnist checkpoint.pkl
 ```
+
+For nck robot task use 
+```
+python evaluate_result --conv True save-network 0 checkpoint.pkl 
+```
+to extract the best network.
+
 
 ## Config file example
 
