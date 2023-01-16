@@ -33,13 +33,13 @@ Scripts are run by
 python name_of_script.py
 ```
 
-## List of unconditional scripts:
+## List of unconditional scripts
 - nck_dcgan.py - unconditional DCGAN
 - nck_dcgan_distr.py - distrubuted version running on more GPUs
 - nck_lsgan.py - unconditional LSGAN
 - nck_lsgan_distr.py - distrubuted version running on more GPUs
 
-## List of conditional scripts:
+## List of conditional scripts
 In conditinal versions, generation is coditioned by coordinates associated with training photograps. In the output directory, a txt file is recorded with coordinates used for generated pjotographs.
 
 - nck_dcganc.py - conditional DCGAN
