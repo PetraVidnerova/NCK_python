@@ -3,25 +3,25 @@
 An  automatic architecture search tool based on multi-objective evolution. It optimises
 both network perfomance and an architecture size.  
 
-## Keywords:
+## Keywords
 deep neural networks, convolutional neural networks, automatic model selection, neural architecture search, multiobjective optimisation, NSGA, NSGAII, NSGA3
 
-## Requirements:
+## Requirements
 
 numpy, keras, pandas, scikit-learn, deap, click, matplotlib
 
-## Main features:
+## Main features
 - supports keras datasets, data form csv files, data from tensorflow records
 - implements "vanilla" GA, multiobjective evolution via NSGA, NSGAII, NSGAIII 
 - runs in parallel on one GPU or parallel on several CPUs 
 - optimises feedworfard deep neural networks with dense layers, convolutinal networks   
  
-## Usage:
+## Usage
 1. Run evolution using `main.py`, produces a `.json` file with the list of all architectures from the pareto-front, a `.pkl` file with the checkpoint (after each iteration). Checkpoint stores all information
  needed to continue the computation in another run as well as the results. 
 2. Inspect results runing `evaluate_result.py` on the resulting `.pkl` checkpoint file 
 
-### main.py: 
+### main.py 
 ```
 usage: main.py [-h] [--id ID] [--log LOG] TASK
 
