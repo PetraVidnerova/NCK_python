@@ -144,5 +144,3 @@ dataset:
   name: data_train.csv
   test_name: data_test.csv
 ```
-
- 
