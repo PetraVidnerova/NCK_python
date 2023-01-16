@@ -1,20 +1,20 @@
 # GANs
 Learning Genearative Adversial Networks to expand photographs database. Two architectures are implemented Deep Convolutional GAN (DCGAN) and Least Squares GAN (LSGAN). Both unconditional and conditional versions are implemented. Learning is possible in distributed GPU environment.
 
-## Keywords:
+## Keywords
 generative adversial networks, distributed learning, DCGAN, LSGAN
 
-## Requirements:
+## Requirements
 
 tensorflow, numpy, pandas, scipy, pillow, matplotlib, scikit-image, time
 
-## Main features:
+## Main features
 - learns and generate artifical photographs of disc
 - implements both unconditional and conditional versions
 - distibuted version runs in parallel on more GPUs
 - computes Frechet Inception Score (FID)
 
-## Usage:
+## Usage
 Scripts are controlled via global variables typed in CAPITAL LETTERS and accessible in codes of the scripts. These are the important ones:
 
 - RES - controls resolution of generated images (64 or 128)
